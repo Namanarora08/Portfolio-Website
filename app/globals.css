@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0a0a0a;
+  --color-surface: #111111;
+  --color-surface-secondary: #18181b;
+  --color-foreground: #ffffff;
+  --color-foreground-secondary: #a1a1aa;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #2563eb;
+
+  --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Geist Mono', Menlo, Courier New, monospace;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html.light {
+    color-scheme: light;
+    --color-background: #ffffff;
+    --color-surface: #f5f5f5;
+    --color-surface-secondary: #e5e5e5;
+    --color-foreground: #0a0a0a;
+    --color-foreground-secondary: #666666;
+    --color-accent: #3b82f6;
+    --color-accent-hover: #2563eb;
+  }
+
+  * {
+    @apply border-surface;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .blur-edge {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .blur-edge::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+    pointer-events: none;
+    mix-blend-mode: multiply;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gradient-accent {
+    background: linear-gradient(135deg, hsl(219 100% 52%) 0%, hsl(200 100% 50%) 100%);
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-effect-light {
+    background: rgba(0, 0, 0, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg-dark hover:scale-105;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      @apply !transition-none !animate-none;
+    }
+  }
+}
+
+/* Remove focus outline for mouse users, but keep for keyboard users */
+*:focus-visible {
+  @apply outline-2 outline-offset-2 outline-accent;
+}
+
+button:focus:not(:focus-visible) {
+  @apply outline-none;
+}
+
+/* Smooth scrolling for links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent layout shift on scrollbar toggle */
+html {
+  overflow-y: scroll;
+}
