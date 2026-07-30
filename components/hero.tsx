@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, Linkedin, Github, Mail } from 'lucide-react';
 import Image from 'next/image';
-import { HERO_STATS, SOCIAL_LINKS } from '@/lib/data';
+import { HERO_STATS } from '@/lib/data';
 
 export function Hero() {
   const containerVariants = {
@@ -118,7 +118,6 @@ export function Hero() {
                 fill
                 priority
                 className="object-cover"
-                priority
               />
             </div>
           </motion.div>
@@ -129,7 +128,7 @@ export function Hero() {
           variants={itemVariants}
           className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-20 pt-20 border-t border-surface-secondary"
         >
-          {HERO_STATS.map((stat, index) => (
+          {HERO_STATS.map((stat) => (
             <motion.div
               key={stat.label}
               variants={itemVariants}

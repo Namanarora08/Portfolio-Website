@@ -47,7 +47,7 @@ export function WhyWorkWithMe() {
 
           {/* Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {WHY_WORK_WITH_ME.map((item, index) => {
+            {WHY_WORK_WITH_ME.map((item) => {
               const Icon = ICON_MAP[item.icon] || Brain;
               return (
                 <motion.div

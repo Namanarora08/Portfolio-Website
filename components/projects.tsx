@@ -40,7 +40,7 @@ export function Projects() {
 
           {/* Featured Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featured.map((project, index) => (
+            {featured.map((project) => (
               <motion.div
                 key={project.id}
                 variants={itemVariants}
