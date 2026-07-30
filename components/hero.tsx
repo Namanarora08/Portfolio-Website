@@ -111,11 +111,12 @@ export function Hero() {
             className="relative aspect-square lg:aspect-auto lg:h-[600px]"
           >
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent/20 to-accent/5 blur-3xl" />
-            <div className="relative h-full rounded-3xl border border-surface-secondary overflow-hidden">
+            <div className="relative h-full w-full rounded-3xl border border-surface-secondary overflow-hidden">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/178036969750-XiqAgEEun11e70XzC4avWz3409xFQc.jpeg"
                 alt="Naman Arora"
                 fill
+                priority
                 className="object-cover"
                 priority
               />

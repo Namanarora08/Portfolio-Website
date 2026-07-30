@@ -95,9 +95,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* Vercel Analytics & Web Vitals */}
-        <script defer src="https://cdn.vercel-analytics.com/v1/script.js" />
-        <script defer src="https://va.vercel-analytics.com/v1/script.js" />
+
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Providers>{children}</Providers>
