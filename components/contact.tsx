@@ -104,7 +104,7 @@ export function Contact() {
                 <p className="text-foreground-secondary">Connect with me</p>
                 <div className="flex gap-4">
                   {[
-                    { name: 'GitHub', url: 'https://github.com/namanarora' },
+                    { name: 'GitHub', url: 'https://GitHub.com/namanarora' },
                     { name: 'LinkedIn', url: 'https://linkedin.com/in/naman-arora' },
                   ].map((social) => (
                     <a

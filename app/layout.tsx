@@ -89,7 +89,7 @@ export default function RootLayout({
               jobTitle: "Software Engineer",
               sameAs: [
                 "https://linkedin.com/in/naman-arora",
-                "https://github.com/namanarora",
+                "https://GitHub.com/namanarora",
               ],
             }),
           }}

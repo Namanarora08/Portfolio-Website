@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { GitHub, Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -60,8 +60,8 @@ export function Footer() {
                 {[
                   {
                     name: 'GitHub',
-                    icon: Github,
-                    url: 'https://github.com/namanarora',
+                    icon: GitHub,
+                    url: 'https://GitHub.com/namanarora',
                   },
                   {
                     name: 'LinkedIn',

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, Linkedin, Github, Mail } from 'lucide-react';
+import { ArrowRight, Download, Linkedin, GitHub, Mail } from 'lucide-react';
 import Image from 'next/image';
 import { HERO_STATS } from '@/lib/data';
 
@@ -78,13 +78,13 @@ export function Hero() {
             {/* Social Links */}
             <motion.div variants={itemVariants} className="flex gap-4 pt-4">
               <a
-                href="https://github.com/namanarora"
+                href="https://GitHub.com/namanarora"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-lg bg-surface hover:bg-surface-secondary transition-colors duration-200 hover:text-accent"
                 aria-label="GitHub"
               >
-                <Github className="w-5 h-5" />
+                <GitHub className="w-5 h-5" />
               </a>
               <a
                 href="https://linkedin.com/in/naman-arora"

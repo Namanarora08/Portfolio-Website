@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, GitHub } from 'lucide-react';
 import { PROJECTS } from '@/lib/data';
 
 export function Projects() {
@@ -76,12 +76,12 @@ export function Projects() {
                   {/* Links */}
                   <div className="flex gap-4 pt-4 border-t border-surface-secondary">
                     <a
-                      href={project.github}
+                      href={project.GitHub}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-sm text-accent hover:text-accent-hover transition-colors"
                     >
-                      <Github className="w-4 h-4" />
+                      <GitHub className="w-4 h-4" />
                       Code
                     </a>
                     {project.demo !== '#' && (
